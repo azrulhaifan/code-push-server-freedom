@@ -4,6 +4,25 @@ The CodePush Server is a Node.js application that powers the CodePush Service. I
 
 Please refer to [react-native-code-push](https://github.com/microsoft/react-native-code-push) for instructions on how to onboard your application to CodePush.
 
+## This Repository Change
+Below is example of azurite connection string used on .env file
+
+### via HTTP
+
+```
+DefaultEndpointsProtocol=http;AccountName=account1;AccountKey=base64key;BlobEndpoint=http://127.0.0.1:10000/account1;QueueEndpoint=http://127.0.0.1:10001/account1;TableEndpoint=http://127.0.0.1:10002/account1;
+```
+
+### via HTTPS
+
+```
+DefaultEndpointsProtocol=https;AccountName=account1;AccountKey=base64key;BlobEndpoint=https://127.0.0.1:10000/account1;QueueEndpoint=https://127.0.0.1:10001/account1;TableEndpoint=https://127.0.0.1:10002/account1;
+```
+
+### To Note
+1. Change "account1" and "base64key"
+2. You can use FQDN host instead of localhost, just make sure it accessible from internet
+
 ## Deployment
 
 ### Local
@@ -115,22 +134,3 @@ Both work and personal accounts use the same application for authentication. The
 
 1. Only letters are allowed.
 1. Maximum 15 characters.
-
-## Another NOTE
-Below is example of azurite connection string
-
-### via HTTP
-
-```
-DefaultEndpointsProtocol=http;AccountName=account1;AccountKey=base64key;BlobEndpoint=http://127.0.0.1:10000/account1;QueueEndpoint=http://127.0.0.1:10001/account1;TableEndpoint=http://127.0.0.1:10002/account1;
-```
-
-### via HTTPS
-
-```
-DefaultEndpointsProtocol=https;AccountName=account1;AccountKey=base64key;BlobEndpoint=https://127.0.0.1:10000/account1;QueueEndpoint=https://127.0.0.1:10001/account1;TableEndpoint=https://127.0.0.1:10002/account1;
-```
-
-### To Note
-1. Change "account1" and "base64key"
-2. You can use FQDN host instead of localhost, just make sure it accessible from internet

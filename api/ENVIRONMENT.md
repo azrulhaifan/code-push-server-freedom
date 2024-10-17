@@ -13,6 +13,11 @@ Currently, the following environment variables are available. For convenience, w
 To emulate Azure Blob Storage locally. Azurite needs to be installed and running, more info [here](README.md#local).
 - `EMULATED`: Set to 'true' in order to use the local emulator instead of a hosted instance
 
+#### Azrutite
+- `AZURITE_CONNECTION_STRING`: Read repository API readme file for example configuration
+
+If you want to make azurite accessible by internet, make sure to open azurite port, or host it behind nginx.
+
 #### Azure
 - `AZURE_STORAGE_ACCOUNT`: The name of your hosted Azure storage instance
 - `AZURE_STORAGE_ACCESS_KEY`: The key to your Azure storage instance (if KeyVault credentials are not provided)
